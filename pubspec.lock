@@ -11,10 +11,10 @@ packages:
   atomic_transact_flutter:
     dependency: "direct main"
     description:
-      path: "../atomic-transact-flutter"
-      relative: true
-    source: path
-    version: "1.1.0"
+      name: atomic_transact_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.2.0"
   boolean_selector:
     dependency: transitive
     description:

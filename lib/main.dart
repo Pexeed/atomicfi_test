@@ -39,15 +39,15 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    // Atomic.transact(
-    //   config: AtomicConfig(
-    //     publicToken: '',
-    //     product: AtomicProductType.deposit,
-    //   ),
-    // );
-    AtomicPlatformInterface.instance.onCompletion = onCompletion;
-    AtomicPlatformInterface.instance.onDataRequest = onDataRequest;
-    AtomicPlatformInterface.instance.onInteraction;
+    Atomic.transact(
+      config: AtomicConfig(
+        publicToken: '',
+        tasks: [AtomicTask(product: AtomicProductType.deposit)],
+      ),
+      onCompletion: onCompletion,
+      onDataRequest: onDataRequest,
+      onInteraction: onInteraction
+    );
   }
 
   onCompletion(AtomicTransactCompletionType type, AtomicTransactResponse? response, AtomicTransactError? error) {
@@ -76,8 +76,8 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      // body: SizedBox.shrink(),
-      body: buildWebview(),
+      body: SizedBox.shrink(),
+      // body: buildWebview(),
     );
   }
 

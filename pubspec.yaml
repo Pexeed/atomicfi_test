@@ -12,8 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: 1.0.2
-  atomic_transact_flutter:
-    path: ../atomic-transact-flutter
+  atomic_transact_flutter: ^1.2.0
   webview_flutter: 3.0.0
 
 dev_dependencies:
